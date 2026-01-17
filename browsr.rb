@@ -2,7 +2,7 @@ class Browsr < Formula
   desc "FREE AI Design Generator - Hacker Green Theme"
   homepage "https://github.com/i-luv-pho/browsr"
   url "https://github.com/i-luv-pho/browsr/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "fbf172f126ff9a9595a8d49add2bbc072ba981a0356bc1cb04515fa23b7e57e9"
+  sha256 "05c2532f4274f8b77b8445e95cb1d689f965ae123c606e814a08397ba1eae695"
   license "MIT"
 
   depends_on "node"
