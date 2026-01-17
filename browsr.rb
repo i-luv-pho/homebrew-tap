@@ -1,8 +1,8 @@
 class Browsr < Formula
-  desc "AI-powered design generation that outputs real HTML/CSS/JS"
+  desc "AI Design Studio - Create stunning HTML/CSS designs with natural language"
   homepage "https://github.com/i-luv-pho/browsr"
-  url "https://github.com/i-luv-pho/browsr/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "99d0b66bfe87583616804984dedad2a0fbf34afbd278446b27fb73f877c200f8"
+  url "https://github.com/i-luv-pho/browsr/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "cb6dfbacfa5fa97f2646a254fb3efc0b32a74c84671abfe9518fdf1a8504fa31"
   license "MIT"
 
   depends_on "node"
