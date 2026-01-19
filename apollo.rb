@@ -1,46 +1,27 @@
-# typed: false
-# frozen_string_literal: true
-
 class Apollo < Formula
-  desc "The AI coding agent built for the terminal."
+  desc "The AI coding agent built for the terminal"
   homepage "https://github.com/i-luv-pho/apollov2"
-  version "0.0.1"
+  version "1.0.2"
 
   depends_on "ripgrep"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/i-luv-pho/apollov2/releases/download/v0.0.1/apollo-darwin-x64.zip"
-      sha256 "38a4dbc9ff2b33d55c755f75c4df1662d98b71b910b6a4a0bf7b1c599e9dc5d1"
-
-      def install
-        bin.install "apollo"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/i-luv-pho/apollov2/releases/download/v0.0.1/apollo-darwin-arm64.zip"
-      sha256 "3c1b94d54423a06c94dc69566688123c2f1eea3a7932eb1274af49fb531f49fc"
-
-      def install
-        bin.install "apollo"
-      end
+      url "https://github.com/i-luv-pho/apollov2/releases/download/v1.0.2/apollo-darwin-arm64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/i-luv-pho/apollov2/releases/download/v1.0.2/apollo-darwin-x64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/i-luv-pho/apollov2/releases/download/v0.0.1/apollo-linux-x64.tar.gz"
-      sha256 "af8a6fc5f2f1aa090c0a265fca15555a34be0cf2db2704ea3874d64bba7dadb6"
-      def install
-        bin.install "apollo"
-      end
-    end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/i-luv-pho/apollov2/releases/download/v0.0.1/apollo-linux-arm64.tar.gz"
-      sha256 "2a784e26b8f4c6d23fbff53e13dacbb9a5addf63b0560c2c6b5d462b2996b2c9"
-      def install
-        bin.install "apollo"
-      end
-    end
+    url "https://github.com/i-luv-pho/apollov2/releases/download/v1.0.2/apollo-linux-x64.tar.gz"
+    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  end
+
+  def install
+    bin.install "apollo"
   end
 end
